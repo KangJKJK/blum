@@ -90,6 +90,9 @@ case $choice in
 
   2)
     echo -e "${GREEN}Blum 봇을 재실행합니다.${NC}"
+
+    # 환경변수 설정
+    WORK="/root/blumtod"
     
     # 사용자에게 프록시 사용 여부를 물어봅니다.
     read -p "프록시를 사용하시겠습니까? (y/n): " use_proxy
@@ -105,6 +108,9 @@ case $choice in
 
   3)
     echo -e "${GREEN}Blum  봇을 업데이트합니다.${NC}"
+    
+    # 환경변수 설정
+    WORK="/root/blumtod"
 
     # 작업 공간으로 이동
     cd "$WORK"

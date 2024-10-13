@@ -108,16 +108,16 @@ case $choice in
 
   3)
     echo -e "${GREEN}Blum  봇을 업데이트합니다.${NC}"
-    
+
+    # GitHub에서 최신 코드 가져오기
+    echo -e "${YELLOW}GitHub에서 최신 코드 가져오는 중...${NC}"
+    curl https://raw.githubusercontent.com/akasakaid/blumtod/refs/heads/main/bot.py -o bot.py && curl https://raw.githubusercontent.com/akasakaid/blumtod/refs/heads/main/models.py -o models.py && curl https://raw.githubusercontent.com/akasakaid/blumtod/refs/heads/main/requirements.txt -o requirements.txt
+
     # 환경변수 설정
     WORK="/root/blumtod"
 
     # 작업 공간으로 이동
     cd "$WORK"
-
-    # GitHub에서 최신 코드 가져오기
-    echo -e "${YELLOW}GitHub에서 최신 코드 가져오는 중...${NC}"
-    curl https://raw.githubusercontent.com/akasakaid/blumtod/refs/heads/main/bot.py -o bot.py && curl https://raw.githubusercontent.com/akasakaid/blumtod/refs/heads/main/models.py -o models.py && curl https://raw.githubusercontent.com/akasakaid/blumtod/refs/heads/main/requirements.txt -o requirements.txt
 
     # 봇 구동
     read -p "프록시를 사용하시겠습니까? (y/n): " use_proxy

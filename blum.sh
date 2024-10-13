@@ -110,6 +110,7 @@ case $choice in
     echo -e "${GREEN}Blum  봇을 업데이트합니다.${NC}"
 
     # GitHub에서 최신 코드 가져오기
+    rm -rf /root/blumtod
     echo -e "${YELLOW}GitHub에서 최신 코드 가져오는 중...${NC}"
     curl https://raw.githubusercontent.com/akasakaid/blumtod/refs/heads/main/bot.py -o bot.py && curl https://raw.githubusercontent.com/akasakaid/blumtod/refs/heads/main/models.py -o models.py && curl https://raw.githubusercontent.com/akasakaid/blumtod/refs/heads/main/requirements.txt -o requirements.txt
 
